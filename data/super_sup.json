@@ -1,0 +1,38 @@
+{
+  "African (AFR)": [
+    "ACB",
+    "ASW",
+    "ESN",
+    "GWD",
+    "LWK",
+    "MSL",
+    "YRI"
+  ],
+  "Ad Mixed American (AMR)": [
+    "CLM",
+    "MXL",
+    "PEL",
+    "PUR"
+  ],
+  "East Asian (EAS)": [
+    "CDX",
+    "CHB",
+    "CHS",
+    "JPT",
+    "KHV"
+  ],
+  "European (EUR)": [
+    "CEU",
+    "FIN",
+    "GBR",
+    "IBS",
+    "TSI"
+  ],
+  "South Asian (SAS)": [
+    "BEB",
+    "GIH",
+    "ITU",
+    "PJL",
+    "STU"
+  ]
+}

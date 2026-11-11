@@ -1,0 +1,17 @@
+# Core Scientific Computing & Data Manipulation
+numpy>=1.24.0
+pandas>=2.0.0
+pyyaml>=6.0
+joblib>=1.3.0
+python-dotenv>=1.0.0
+
+# Machine Learning & Gradient Boosting
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+catboost>=1.2.0
+
+# Deep Learning (TabM & TabM_mini)
+torch>=2.0.0
+
+# Visualization
+matplotlib>=3.7.0

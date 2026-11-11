@@ -1,0 +1,28 @@
+data:
+  x_train: data/X_train.csv
+  y_train: data/y_train.csv
+  x_test: data/X_test.csv
+  y_test: data/y_test.csv
+  label_mapping: data/label_mapping.json
+
+model:
+  k: 192
+  criterion: MID
+  eps: 1.0e-12
+
+train:
+  save_path: experiment/models/saved/mrmr_selector.joblib
+
+experiments:
+  mrmr_sweep:
+    all_k_list: [5, 10, 15, 20, 30, 50, 55, 100, 120, 140, 150, 160, 175]
+    new_k_list: [120, 140, 150, 160, 175]
+    full_k: 192
+    model_names:
+      - Logistic Regression
+      - Random Forest
+      - XGBoost
+      - CatBoost
+      - RF + MLP Stacking
+    plot_path: experiment/results/mrmr/mrmr_results.png
+    markdown_path: experiment/results/mrmr_comparison.md

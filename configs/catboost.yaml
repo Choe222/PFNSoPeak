@@ -1,0 +1,26 @@
+data:
+  x_train: data/X_train.csv
+  y_train: data/y_train.csv
+  x_test: data/X_test.csv
+  y_test: data/y_test.csv
+  label_mapping: data/label_mapping.json
+
+model:
+  iterations: 500
+  learning_rate: 0.05
+  depth: 6
+  random_seed: 42
+  verbose: 0
+  allow_writing_files: false
+
+train:
+  save_path: experiment/models/saved/catboost.joblib
+
+experiments:
+  overall:
+    title: "CatBoost Evaluation Results"
+    output_path: experiment/results/catboost_results.png
+  subpop:
+    display_name: CatBoost
+    hist_path: experiment/results/subpop/histogram/catboost_results.png
+    cm_path: experiment/results/subpop/confusion_matrix/catboost_confusion_matrix.png

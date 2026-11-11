@@ -1,0 +1,32 @@
+data:
+  x_train: data/X_train.csv
+  y_train: data/y_train.csv
+  x_test: data/X_test.csv
+  y_test: data/y_test.csv
+  label_mapping: data/label_mapping.json
+
+model:
+  n_layers: 2
+  dim: 128
+  k: 32
+  dropout: 0.1
+
+train:
+  lr: 0.001
+  weight_decay: 0.0001
+  grad_clip: 1.0
+  batch_size: 128
+  max_epochs: 300
+  patience: 16
+  val_ratio: 0.15
+  random_state: 42
+  device: auto
+  save_path: experiment/models/saved/tabm.pt
+
+experiments:
+  subpop:
+    display_name: TabM
+    hist_title: null
+    cm_title: "TabM - Normalized Confusion Matrix (26 Populations)"
+    hist_path: experiment/results/subpop/histogram/tabm128_results.png
+    cm_path: experiment/results/subpop/confusion_matrix/tabm_confusion_matrix.png

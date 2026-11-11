@@ -1,0 +1,29 @@
+data:
+  x_train: data/X_train.csv
+  y_train: data/y_train.csv
+  x_test: data/X_test.csv
+  y_test: data/y_test.csv
+  label_mapping: data/label_mapping.json
+
+model:
+  hidden_layer_sizes: [128, 64]
+  activation: relu
+  solver: adam
+  alpha: 0.01
+  batch_size: 64
+  learning_rate_init: 0.001
+  max_iter: 300
+  early_stopping: true
+  random_state: 42
+
+train:
+  save_path: experiment/models/saved/mlp.joblib
+  fallback_stacking_path: experiment/models/saved/rf_mlp_stacking.joblib
+
+experiments:
+  subpop:
+    display_name: MLP
+    hist_title: "MLP - Accuracy & F1 Score across 26 Populations"
+    cm_title: "MLP - Normalized Confusion Matrix (26 Populations)"
+    hist_path: experiment/results/subpop/histogram/mlp_results.png
+    cm_path: experiment/results/subpop/confusion_matrix/mlp_confusion_matrix.png

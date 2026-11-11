@@ -1,0 +1,47 @@
+data:
+  x_train: data/X_train.csv
+  y_train: data/y_train.csv
+  x_test: data/X_test.csv
+  y_test: data/y_test.csv
+  label_mapping: data/label_mapping.json
+
+model:
+  n_splits: 5
+  random_state: 42
+  n_jobs: -1
+  rf:
+    n_estimators: 300
+    max_depth: null
+    random_state: 42
+    n_jobs: -1
+  mlp:
+    hidden_layer_sizes: [128, 64]
+    activation: relu
+    solver: adam
+    alpha: 0.01
+    batch_size: 64
+    learning_rate_init: 0.001
+    max_iter: 300
+    early_stopping: true
+    random_state: 42
+  meta_lr:
+    C: 1.0
+    max_iter: 1000
+    random_state: 42
+
+train:
+  save_path: experiment/models/saved/rf_mlp_stacking.joblib
+
+experiments:
+  subpop:
+    display_name: "RF + MLP Stacking"
+    hist_title: "RF + MLP + L2 Logistic Stacking - Accuracy & F1 Score across 26 Populations"
+    cm_title: "RF + MLP Stacking - Normalized Confusion Matrix (26 Populations)"
+    hist_path: experiment/results/subpop/histogram/rf_mlp_stacking_results.png
+    cm_path: experiment/results/subpop/confusion_matrix/rf_mlp_stacking_confusion_matrix.png
+  cm_diff:
+    mlp_path: experiment/models/saved/mlp.joblib
+    rf_path: experiment/models/saved/random_forest.joblib
+    stacking_path: experiment/models/saved/rf_mlp_stacking.joblib
+    mlp_diff_png: experiment/results/subpop/confusion_matrix/mlp_minus_rf_mlp_stacking_confusion_matrix.png
+    rf_diff_png: experiment/results/subpop/confusion_matrix/rf_minus_rf_mlp_stacking_confusion_matrix.png

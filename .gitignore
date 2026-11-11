@@ -1,0 +1,89 @@
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets.*
+
+# Datasets & Raw Data 
+data/*.csv
+data/*.tsv
+data/*.parquet
+data/*.pkl
+data/*.npy
+data/*.npz
+!data/label_mapping.json
+!data/super_sup.json
+
+# Saved Model Checkpoints & Large Artifacts
+experiment/models/saved/
+*.joblib
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.h5
+*.bin
+
+# Training Logs & Temporary Experiment Outputs
+catboost_info/
+logs/
+*.log
+*.tfevents*
+events.out.*
+wandb/
+mlruns/
+runs/
+
+# Python Bytecode & Packaging
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+conda-meta/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# IDE & Editor Specific Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini

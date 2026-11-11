@@ -1,0 +1,18 @@
+data:
+  x_train: data/X_train.csv
+  y_train: data/y_train.csv
+  x_test: data/X_test.csv
+  y_test: data/y_test.csv
+  label_mapping: data/label_mapping.json
+
+model:
+  max_iter: 1000
+  random_state: 42
+
+train:
+  save_path: experiment/models/saved/logistic_regression.joblib
+
+experiments:
+  overall:
+    title: "Logistic Regression Evaluation Results"
+    output_path: experiment/results/logistic_regression_results.png
